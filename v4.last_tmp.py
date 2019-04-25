@@ -743,14 +743,40 @@ while opc.lower() == "s" or opc.lower() == "sim":
 
         arquivo_c = input("Você quer ler o ‘texto’ que preparei de conclusão final ? :")
         if arquivo_c.lower() == "s" or arquivo_c.lower() == "sim":
+            
+            arq = open("Respostas.txt", "a+")
+            texto1 = f"RESPOSTAS BRUTAS: \nTB_1: \n 1.{info_colida} \nTB_2: \n 2.{v_cabaco} \nTB_3: \n 3.{bebedeira} \nTB_4: \n 4.{fumante} "
+            
+            texto2 = f"Conclusao final"      #-------------------------!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            
+
+            arq.write(texto1 + "\n ")
+            arq.write("="*40 + "\n\n")
+            arq.write(texto2 + "\n\n | The end. \n")
+            arq.close()
+            
             print(" |Colhendo todos os dados.... ")
             sleep(3.2)
+            
             print(" |Compactando... ")
             sleep(2.5)
+            
             print("💾 Pronto salvo ")
             print("📄 Vai lá ler o arquivo, Eeeehh cabo.")
+            print("  ")
+            print("  ")
+            
+            sleep(3.3)
+            arq = open("Respostas.txt", "r")
+            end = arq.read()
+            print(end)
+            arq.close()
+            
+            print("  ")
+            print("  ")
             sleep(1.2)
-            print(" The end ")
+            print(" | The end. ")
+        
         else:
             print("|Já que você não quer ler o arquivo, então cabo. ")
             print("| The end. ")
